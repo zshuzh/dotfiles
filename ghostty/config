@@ -1,0 +1,21 @@
+# theming
+theme = "rose-pine"
+
+# cursor
+shell-integration-features = no-cursor
+cursor-style = underline
+cursor-style-blink = false
+
+# macOS options
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+window-colorspace = display-p3
+
+# window borders 
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
+
+# misc
+confirm-close-surface = false
