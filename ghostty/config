@@ -1,5 +1,5 @@
 # theming
-theme = "rose-pine"
+theme = "carbonfox"
 
 # cursor
 shell-integration-features = no-cursor
@@ -19,3 +19,7 @@ window-padding-color = extend
 
 # misc
 confirm-close-surface = false
+
+# fonts
+font-style-italic = false
+font-style-bold-italic = false
