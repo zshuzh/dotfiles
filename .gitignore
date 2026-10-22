@@ -3,6 +3,9 @@
 !/ghostty/
 !/zsh/
 
+!/nvim/
+!/nvim/**
+
 !/setup/
 !/setup/**
 
