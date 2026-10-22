@@ -2,3 +2,7 @@
 
 !/ghostty/
 !/zsh/
+
+!/herdr/
+/herdr/*
+!/herdr/config.toml
