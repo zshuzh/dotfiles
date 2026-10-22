@@ -15,5 +15,5 @@ cd ~/.config || exit
 git init
 git remote add origin git@github.com:zshuzh/dotfiles.git
 git fetch origin
-git checkout --no-overwrite-ignore -b master --track origin/master
+git checkout --no-overwrite-ignore -b main --track origin/main
 ```
