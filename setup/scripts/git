@@ -1,0 +1,3 @@
+git config --global core.editor "nvim"
+
+# TODO: user.name and user.email with a prompt

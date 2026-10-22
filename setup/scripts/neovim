@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# TODO: enforce prerequisites
+# Prerequisites:
+# - Xcode Command Line Tools: Change default branch name for git
+# - homebrew
+# - GitHub SSH keys
+
+if [[ ! -d "$HOME/Developer/neovim" ]]; then
+    echo "[NEOVIM]: cloning repository"
+    git clone git@github.com:neovim/neovim.git "$HOME/Developer/neovim"
+fi
+
+cd "$HOME/Developer/neovim" || exit
+
+echo "[NEOVIM]: updating repository"
+git pull
+
+brew install ninja cmake gettext curl
+
+make distclean
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+
+# needed for pickers
+brew install ripgrep
+
+# needed for nvim-treesitter
+brew install tree-sitter-cli

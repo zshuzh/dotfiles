@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ ! -x /opt/homebrew/bin/brew ]]; then
+    echo "[MACAPPS]: installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo "[MACAPPS]: installing apps from Brewfile"
+brew bundle install --file="$script_dir/../Brewfile" --no-upgrade

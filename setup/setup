@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+filter=""
+
+while [[ "$#" > 0 ]]; do
+	filter="$1"
+    shift
+done
+
+cd "$script_dir" || exit
+
+scripts=$(find ./scripts -maxdepth 1 -mindepth 1 -type f)
+
+for script in $scripts; do
+    if echo "$script" | grep -qv "$filter"; then
+        continue
+    fi
+
+    echo "[EXECUTING]: $script"
+    "$script"
+done
