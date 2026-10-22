@@ -1,5 +1,5 @@
 # theming
-theme = "carbonfox"
+theme = "Rose Pine"
 
 # cursor
 shell-integration-features = no-cursor
@@ -11,15 +11,25 @@ macos-titlebar-style = tabs
 macos-option-as-alt = true
 window-colorspace = display-p3
 
-# window borders 
+# notifications
+bell-features = system,title,border
+bell-features = audio,border
+bell-audio-path = /System/Library/Sounds/Glass.aiff
+
+# window borders
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
-window-padding-color = extend
 
 # misc
 confirm-close-surface = false
 
 # fonts
+font-size = 12
 font-style-italic = false
 font-style-bold-italic = false
+
+background-image = chamber.png
+background-image-opacity = 0.1
+# background-opacity = 0.98
+background-image-fit = cover
